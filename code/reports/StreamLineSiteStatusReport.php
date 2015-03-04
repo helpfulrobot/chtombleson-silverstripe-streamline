@@ -25,8 +25,8 @@ class StreamLineSiteStatusReport extends SS_Report
             'ModuleName' => 'Name',
             'CurrentVersion' => 'Current Version',
             'LatestVersion' => 'Latest Version',
-            'Stable' => 'Stable',
-            'UpToDate' => 'Up to Date'
+            'stableText' => 'Stable',
+            'upToDateText' => 'Up to Date'
         );
 
         return $fields;

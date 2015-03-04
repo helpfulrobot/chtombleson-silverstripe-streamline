@@ -40,7 +40,7 @@ class StreamLineContactPage extends Page
         $data_columns->setDisplayFields(array(
             'Name' => 'Name',
             'Type'=> 'Type',
-            'Required' => 'Required',
+            'requiredText' => 'Required',
         ));
 
         $contact_form_fields = new GridField(

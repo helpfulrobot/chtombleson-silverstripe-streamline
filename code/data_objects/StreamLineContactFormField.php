@@ -59,4 +59,9 @@ class StreamLineContactFormField extends DataObject
 
         return $fields;
     }
+
+    public function requiredText()
+    {
+        return $this->Required ? 'Yes' : 'No';
+    }
 }

@@ -10,4 +10,14 @@ class StreamLineSiteStatusModule extends DataObject
         'Stable' => 'Boolean',
         'Git' => 'Text',
     );
+
+    public function stableText()
+    {
+        return $this->Stable ? 'Yes' : 'No';
+    }
+
+    public function upToDateText()
+    {
+        return $this->UpToDate ? 'Yes' : 'No';
+    }
 }
