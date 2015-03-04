@@ -13,8 +13,7 @@
     },
     "require": {
         "silverstripe/cms": "~3.1",
-        "silverstripe/framework": "~3.1",
-        "undefinedoffset/sortablegridfield": "0.4.1"
+        "silverstripe/framework": "~3.1"
     },
     "extra": {
         "installer-name": "streamline"
