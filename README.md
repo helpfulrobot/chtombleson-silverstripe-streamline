@@ -6,10 +6,11 @@ of sites.
 ## Current Features
 
   * Customisable Contact Form
+  * Site Status Report
 
 ## Features Coming
 
-  * Site Status Report
+  * Coming Soon
 
 ## Installation
 
