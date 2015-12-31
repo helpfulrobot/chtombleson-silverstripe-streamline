@@ -20,7 +20,8 @@ class StreamLineSiteStatusReport extends SS_Report
         return StreamLineSiteStatusModule::get()->sort('ModuleName');
     }
 
-    public function columns() {
+    public function columns()
+    {
         $fields = array(
             'ModuleName' => 'Name',
             'CurrentVersion' => 'Current Version',
@@ -38,7 +39,7 @@ class StreamLineSiteStatusReport extends SS_Report
         $composer = json_decode(file_get_contents(dirname(dirname(dirname(__DIR__))) . '/composer.lock'), true);
         $packages = array();
 
-        foreach($composer['packages'] as $package) {
+        foreach ($composer['packages'] as $package) {
             if (strpos($package['name'], 'composer') === false) {
                 $packages[] = array(
                     'Name' => $package['name'],
@@ -52,7 +53,7 @@ class StreamLineSiteStatusReport extends SS_Report
         $base_url = 'https://api.github.com/repos/';
 
         // Query github to get the latest info
-        foreach($packages as $idx => $package) {
+        foreach ($packages as $idx => $package) {
             preg_match('#https:\/\/github.com\/([^\.]+)\.git#', $package['Git'], $matches);
             $url = $base_url . $matches[1];
 
@@ -109,7 +110,7 @@ class StreamLineSiteStatusReport extends SS_Report
 
         $base_url = 'https://api.github.com/repos/';
 
-        foreach($modules as $module) {
+        foreach ($modules as $module) {
             preg_match('#https:\/\/github.com\/([^\.]+)\.git#', $module->Git, $matches);
             $url = $base_url . $matches[1];
 

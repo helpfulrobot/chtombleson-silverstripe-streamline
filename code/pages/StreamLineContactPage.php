@@ -14,7 +14,8 @@ class StreamLineContactPage extends Page
         'ContactFields' => 'StreamLineContactFormField',
     );
 
-    public function getCMSFields() {
+    public function getCMSFields()
+    {
         $fields = parent::getCMSFields();
 
         // Contact Form settings
@@ -171,7 +172,6 @@ class StreamLineContactPage_Controller extends Page_Controller
 
         if ((!empty($email_field) && !empty($data[$email_field->Name])) &&
             Email::validEmailAddress($data[$email_field->Name])) {
-
             return $data[$email_field->Name];
         }
 
